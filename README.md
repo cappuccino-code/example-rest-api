@@ -23,10 +23,17 @@
 
 ## To Do:
 
+- [ ] dockerize database image
 - [ ] only create tables if they do not exist
 - [ ] create a drop script for all tables with the specified name
 - [ ] create a test script to check if all routes are working
-- [ ] start adding middleware to test
+- [ ] start adding middleware to test (JWT auth, sanitization, security, logging, etc)
+
+## Steps to Run:
+
+1. run the command 'npm i' to install all dependancies
+2. install postgres sql following the instructions below
+3. run the commands needed to start
 
 ## Commands to Run:
 
