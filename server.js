@@ -8,12 +8,14 @@ const express = require('express')
 const bodyParser = require('body-parser')
 
 const app = express()
+const helmet = require('helmet');
 const port = process.env.API_PORT || 3000 // default to port 3000 if not specified
 const userRoutes = require('./routes/users')
 require('./database/startup.js')(); //IIFE use of the require statement
 
 // index route for the api
 app.use(bodyParser.json())
+app.use(helmet())
 app.get('/', (request, response) => {
     response.json({
         info: 'Welcome to the CRUD API P.O.C. Testing',
@@ -21,7 +23,9 @@ app.get('/', (request, response) => {
             'Node',
             'Express',
             'PostgresSQL',
-            'Environment Variables'
+            'Environment Variables',
+            'Docker',
+            'Security Middleware'
         ]
     })
 })
