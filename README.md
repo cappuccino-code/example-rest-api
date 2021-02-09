@@ -56,6 +56,21 @@ npm run db:create # to create the databases specified in database/config.js
 npm start
 ```
 
+## API Routes:
+
+- HOST:PORT/users GET POST PUT DELETE
+- Example JSON object for the User Routes, there is no security for routes
+
+```json
+{
+  "email": "email@email.ca",
+  "firstName": "First",
+  "lastName": "Last",
+  "age": 26,
+  "password": "somePassword"
+}
+```
+
 ## Commands to Remember:
 
 ```shell
