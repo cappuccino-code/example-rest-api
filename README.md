@@ -52,13 +52,20 @@
 # To Start:
 npm i
 docker-compose up -d # to create database image
+# make sure .env file is set with the password variable
 npm run db:create # to create the databases specified in database/config.js
 npm start
 ```
 
+> Then using an application like Postman you can create a json object like below and test the POST route with an object creation and then test the other routes to confirm successful set up.
+> ![alt Image showign the successful postman submission of a JSON object](https://github.com/cappuccino-code/example-rest-api/blob/main/images/postman-POST-test.png)
+
 ## API Routes:
 
-- HOST:PORT/users GET POST PUT DELETE
+> example: locahost:300/users
+
+- HOST:PORT/users GET POST
+- HOST:PORT/users/:id GET PUT DELETE
 - Example JSON object for the User Routes, there is no security for routes
 
 ```json
