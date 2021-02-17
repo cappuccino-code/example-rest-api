@@ -14,11 +14,13 @@ const bodyParser = require('body-parser')
 
 const app = express()
 const helmet = require('helmet');
+const cors = require('cors');
 const port = process.env.API_PORT || 3000 // default to port 3000 if not specified
 
 //initialize all middleware and the index route for the api
 app.use(bodyParser.json())
 app.use(helmet())
+app.use(cors())
 app.use(errorLogger)
 app.get('/', (request, response) => {
     response.json({
