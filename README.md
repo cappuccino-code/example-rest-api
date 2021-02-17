@@ -1,16 +1,15 @@
-# P.O.C Testing - RESTful API and Data Persistance
+# Skills Guild: P.O.C Testing - RESTful API and Data Persistance
 
-## Status: INCOMPLETE
+## Status: COMPLETE
 
 ## Technologies Used/ Tested:
 
 - [x] Node
 - [x] Express
 - [x] PostgresSQL (pgsql) - Relational Database
-- [ ] (optional) MySQL
 - [x] Docker - when implemented will create the Databse # Based on https://hub.docker.com/_/postgres
-- [ ] User Authentication (JWT)
-- [ ] Logs
+- [x] User Authentication (JWT) - Handled by Firebase Admin
+- [x] Logs
 - [x] Enviroment Variables
 
 ## Packages Used:
@@ -30,15 +29,15 @@
 ## To Do:
 
 - [x] dockerize database image to avoid installing postgres on every machine
-- [ ] only return the .rows entry from the database responses
+- [x] only return the .rows entry from the database responses
 - [ ] add pgadmin to the docker image to interact with the database (to query database without installing postgres)
-- [ ] look into using the sequelize package: https://sequelize.org/master/manual/getting-started.html
+- [x] look into using the sequelize package: https://sequelize.org/master/manual/getting-started.html
 - [x] only create tables if they do not exist | add line DROP TABLE IF EXISTS name
 - [x] ~~create a drop script for all tables with the specified name~~ Will jsut delete tables with the above line for now
-- [ ] create a test script to check if all routes are working
+- [x] create a test script to check if all routes are working
 - [x] start adding middleware to test (sanitization, security)
-- [ ] add encrypted passwords for users (bcrypt, JWT auth)
-- [ ] add logging support from packages like winston or debug
+- [x] add ~~encrypted passwords for users (bcrypt, JWT auth)~~ Firebase Authentication (supports JWT, encryption, multi-factor authentication)
+- [x] add logging support from packages like winston ~~or debug~~~
 
 ## Steps to Run:
 
@@ -58,7 +57,8 @@ npm start
 ```
 
 > Then using an application like Postman you can create a json object like below and test the POST route with an object creation and then test the other routes to confirm successful set up.
-> ![alt Image showign the successful postman submission of a JSON object](https://github.com/cappuccino-code/example-rest-api/blob/main/images/postman-POST-test.png)
+> ![alt Image showing the successful postman submission of a JSON object](https://github.com/cappuccino-code/example-rest-api/blob/main/images/postman-POST-test.png)
+> ![alt Image showing unauthorized access to the api using firebase admin](https://github.com/cappuccino-code/example-rest-api/blob/main/images/postman-UNAUTHORIZED-test.png)
 
 ## API Routes:
 

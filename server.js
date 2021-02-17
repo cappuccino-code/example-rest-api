@@ -16,7 +16,7 @@ const app = express()
 const helmet = require('helmet');
 const port = process.env.API_PORT || 3000 // default to port 3000 if not specified
 
-// index route for the api
+//initialize all middleware and the index route for the api
 app.use(bodyParser.json())
 app.use(helmet())
 app.use(errorLogger)

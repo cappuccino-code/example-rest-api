@@ -3,3 +3,4 @@ node_modules/
 pgdata/
 # hide everything inside the logs folder but not the actual logs folder
 /logs/*
+/config/service-account-key.json

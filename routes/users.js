@@ -1,9 +1,11 @@
+const checkIfAuthenticated = require('../middleware/checkIfAuthenticated')
+
 module.exports = (app, db) => {
     app.get("/users", (req, res) =>
         db.users.findAll().then((result) => res.json(result))
     );
 
-    app.get("/users/:id", (req, res) =>
+    app.get("/users/:id", checkIfAuthenticated, (req, res) =>
         db.users.findByPk(req.params.id).then((result) => res.json(result))
     );
 
@@ -16,7 +18,7 @@ module.exports = (app, db) => {
         }).then((result) => res.json(result))
     );
 
-    app.put("/users/:id", (req, res) =>
+    app.put("/users/:id", checkIfAuthenticated, (req, res) =>
         db.users.update({
             firstName: req.body.firstName,
             lastName: req.body.lastName,
@@ -30,7 +32,7 @@ module.exports = (app, db) => {
             }).then((result) => res.json(result))
     );
 
-    app.delete("/users/:id", (req, res) =>
+    app.delete("/users/:id", checkIfAuthenticated, (req, res) =>
         db.users.destroy({
             where: {
                 id: req.params.id
