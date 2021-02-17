@@ -57,8 +57,8 @@ npm start
 ```
 
 > Then using an application like Postman you can create a json object like below and test the POST route with an object creation and then test the other routes to confirm successful set up.
-> ![alt Image showing the successful postman submission of a JSON object](https://github.com/cappuccino-code/example-rest-api/blob/main/images/postman-POST-test.png)
-> ![alt Image showing unauthorized access to the api using firebase admin](https://github.com/cappuccino-code/example-rest-api/blob/main/images/postman-UNAUTHORIZED-test.png)
+> ![alt Image showing the successful postman submission of a JSON object](https://github.com/cappuccino-code/example-rest-api/blob/main/images/postman-POST-test.png) > ![alt Image showing unauthorized access to the api using firebase admin](https://github.com/cappuccino-code/example-rest-api/blob/main/images/postman-UNAUTHORIZED-test.png)
+> ![alt Image showing the functioning example frontend app that posts and displays fake users from the unauthorized routes](https://github.com/cappuccino-code/example-rest-api/blob/main/images/frontend-test.png)
 
 ## API Routes:
 

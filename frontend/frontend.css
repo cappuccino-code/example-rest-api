@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: lightgray;
+}
+
+main{
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button {
+    background-color: red;
+    font-weight: 700;
+    font-size: 1em;
+}
+ul {
+    border: 2px solid purple;
+    max-height: 20em;
+    overflow-y: scroll;
+}
